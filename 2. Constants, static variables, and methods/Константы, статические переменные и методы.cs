@@ -6,7 +6,7 @@ class SomeClass
     // после объявления константа немодифицируема 
     const int a = 2000;
     public readonly string s;
-    // const string t = DateTime.Now.ToString(); // присваиваемое выражение не константа
+    //const string t = DateTime.Now.ToString(); // присваиваемое выражение не константа
     static int i = 100;
     public static int GetI()
     {
