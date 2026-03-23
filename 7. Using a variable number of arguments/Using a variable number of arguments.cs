@@ -9,7 +9,7 @@ namespace CSharp.Params
             int m;
             if (nums.Length == 0)
             {
-                Console.WriteLine("Ошибка: нет аргументов.");
+                Console.WriteLine("Error: No arguments.");
                 return 0;
             }
             m = nums[0];
@@ -29,23 +29,18 @@ namespace CSharp.Params
         {
             int min;
             int a = 10, b = 20;
-            // Вызываем метод с двумя значениями
             min = MinVal(a, b);
-            Console.WriteLine("Минимум равен " + min);
-            // Вызываем метод с тремя значениями
+            Console.WriteLine("The minimum is equal to " + min);
             min = MinVal(a, b, -1);
-            Console.WriteLine("Минимум равен " + min);
-            // Вызываем метод с пятью значениями
+            Console.WriteLine("The minimum is equal to " + min);
             min = MinVal(18, 23, 3, 14, 'A');
-            Console.WriteLine("Минимум равен " + min);
-            // Вызываем метод с int-массивом.
+            Console.WriteLine("The minimum is equal to " + min);
             int[] args = { 45, 67, 34, 9, 112, 8 };
             min = MinVal(args);
-            Console.WriteLine("Минимум равен " + min);
+            Console.WriteLine("The minimum is equal to " + min);
 
-            // Использование обычного параметра вместе с params-параметром
-            ShowArgs("Вот несколько целых чисел", 1, 2, 3, 4, 5);
-            ShowArgs("А вот еще два числа", 17, 20);
+            ShowArgs("Here are some integers", 1, 2, 3, 4, 5);
+            ShowArgs("Here are two more numbers", 17, 20);
         }
     }
 }

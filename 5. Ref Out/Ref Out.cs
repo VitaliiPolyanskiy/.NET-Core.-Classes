@@ -1,64 +1,67 @@
 using System;
+using System.Text;
 namespace CSharp.Classes
 {
     class MainClass
     {
         static void Main()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
             double a = 10, b = 5;
             Console.WriteLine("a = " + a + "\t b = " + b);
             NoSwap(a, b);
             Console.WriteLine("a = " + a + "\t b = " + b);
             Swap(ref a, ref b);
-            Console.WriteLine("a = " + a + "\t b = " + b + "\n\n");
+            Console.WriteLine("a = " + a + "\t b = " + b + "\n");
 
             int[] A = [1, 2, 3];
-            Console.WriteLine("\n\nМассив A");
+            Console.WriteLine("\nМасив A");
             foreach (int n in A)
                 Console.Write("{0,4}", n);
             int[] B = [4, 5, 6];
-            Console.WriteLine("\n\nМассив B");
+            Console.WriteLine("\n\nМасив B");
             foreach (int n in B)
                 Console.Write("{0,4}", n);
 
             NoSwapArray(A, B);
 
-            Console.WriteLine("\n\nМассив A");
+            Console.WriteLine("\n\nМасив A");
             foreach (int n in A)
                 Console.Write("{0,4}", n);
-            Console.WriteLine("\n\nМассив B");
+            Console.WriteLine("\n\nМасив B");
             foreach (int n in B)
                 Console.Write("{0,4}", n);
 
             SwapArray(ref A, ref B);
 
-            Console.WriteLine("\n\nМассив A");
+            Console.WriteLine("\n\nМасив A");
             foreach (int n in A)
                 Console.Write("{0,4}", n);
-            Console.WriteLine("\n\nМассив B");
+            Console.WriteLine("\n\nМасив B");
             foreach (int n in B)
                 Console.Write("{0,4}", n);
 
-            string s1 = "C#", s2 = ".NET8";
+            string s1 = "C#", s2 = ".NET10";
 
             NoSwapString(s1, s2);
 
-            Console.WriteLine("\n\nСтрока 1: " + s1);
-            Console.WriteLine("\n\nстрока 2: " + s2);
+            Console.WriteLine("\n\nРядок 1: " + s1);
+            Console.WriteLine("\nРядок 2: " + s2);
 
             SwapString(ref s1, ref s2);
 
-            Console.WriteLine("\n\nСтрока 1: " + s1);
-            Console.WriteLine("\n\nстрока 2: " + s2);
+            Console.WriteLine("\nРядок 1: " + s1);
+            Console.WriteLine("\nРядок 2: " + s2);
 
             Calculate(a, b, out double add, out double subtract, out double mult, out double div);
             Console.WriteLine("\na = " + a + "\t b = " + b + "\n\n");
-            Console.WriteLine("Сумма чисел " + add);
-            Console.WriteLine("Разность чисел " + subtract);
-            Console.WriteLine("Произведение чисел " + mult);
-            Console.WriteLine("Деление чисел " + div);
+            Console.WriteLine("Сума чисел " + add);
+            Console.WriteLine("Різниця чисел " + subtract);
+            Console.WriteLine("Добуток чисел " + mult);
+            Console.WriteLine("Ділення чисел " + div);
 
-            Student st = new("Юрий", "Алексеенко", 20, 12);
+            Student st = new("Юрій", "Олексієнко", 20, 12);
             st.Show();
             (string firstName, string lastName, int age, double rating) = st;
             Console.WriteLine($"{firstName}\t{lastName}\t{age}\t{rating}");

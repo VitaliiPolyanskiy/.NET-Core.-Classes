@@ -16,12 +16,6 @@ namespace Returned_reference_values
                        ];
         private Book nobook = null;
 
-        /*
-         Возвращаемые ссылочные значения — это значения, которые метод возвращает вызывающему объекту по ссылке. 
-        Это значит, что вызывающий объект может изменять значение, возвращаемое методом, и это изменение будет 
-        отражаться в состоянии объекта в вызывающем методе.
-        */
-
         public ref Book GetBookByTitle(string title)
         {
             for (int ctr = 0; ctr < books.Length; ctr++)
@@ -47,7 +41,6 @@ namespace Returned_reference_values
         {
             var bc = new BookCollection();
             bc.ListBooks();
-            // book - ссылочная локальная переменная
             ref var book = ref bc.GetBookByTitle("CLR via C#");
             if (book != null)
                 book = new Book { Title = "C# 7 и .NET Core", Author = "Mark Price" };

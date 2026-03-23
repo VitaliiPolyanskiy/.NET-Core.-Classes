@@ -14,7 +14,7 @@ class Test
 {
     static void Main()
     {
-        SomeClass obj = new() { Count = 100, Name = "Название" };
+        SomeClass obj = new() { Count = 100, Name = "Some Name" };
         Console.WriteLine(obj.Count + " " + obj.Name);
         SomeClass.OptArg(1, 2, 3);
         SomeClass.OptArg(1, 2);

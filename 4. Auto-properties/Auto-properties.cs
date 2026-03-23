@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 class Student
 {
@@ -9,11 +10,7 @@ class Student
     }
     public int Age { get; set; }
 
-    // Eсли в C# 5.0 необходимо сделать автосвойство доступным для установки только из класса, 
-    // то следует указать private set.
-    // public int Code { get; private set; }
-    // В C# 6.0 необязательно указывать private set
-    public int Code { get; } // C# 6.0
+    public int Code { get; } 
 
     public string Name { get; set; }
     public string Surname { get; set; }
@@ -22,7 +19,7 @@ class Student
 
 class Person
 {
-    public string Name { get; set; } = "Иван";
+    public string Name { get; set; } = "Петро";
     public int Age { get; set; } = 25;
 }
 
@@ -30,19 +27,21 @@ class MainClass
 {
     static void Main()
     {
+        Console.OutputEncoding = Encoding.UTF8;
+        Console.InputEncoding = Encoding.UTF8;
         Student[] st = new Student[2];
         for (int i = 0; i < st.Length; i++)
         {
             st[i] = new Student();
-            Console.WriteLine("Введите имя: ");
+            Console.WriteLine("Введіть ім'я: ");
             st[i].Name = Console.ReadLine();
-            Console.WriteLine("Введите фамилию: ");
+            Console.WriteLine("Введіть прізвище: ");
             st[i].Surname = Console.ReadLine();
-            Console.WriteLine("Введите возраст: ");
+            Console.WriteLine("Введіть вік: ");
             st[i].Age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите средний балл: ");
+            Console.WriteLine("Введіть середній бал: ");
             st[i].Average = Convert.ToDouble(Console.ReadLine());
-            //st[i].Code = 100; // свойство Code только для чтения
+            //st[i].Code = 100; // Властивість Code тільки для читання
         }
         for (int i = 0; i < st.Length; i++)
         {

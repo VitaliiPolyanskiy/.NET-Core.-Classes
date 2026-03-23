@@ -21,7 +21,9 @@ namespace Overload
         }
 
         /*
-         public static void Test(out int a)//Нельзя создать две перегрузки с ref и out на один   и тот же тип.
+         * You cannot create two overloads with ref and out on the same type.
+         * 
+         public static void Test(out int a) 
          {
              Console.WriteLine("out int");
              a = 10;

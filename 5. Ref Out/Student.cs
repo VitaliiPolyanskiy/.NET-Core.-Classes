@@ -9,7 +9,7 @@ namespace CSharp.Classes
             Console.WriteLine($"{_firstName}\t{_lastName}\t{_age}\t{_rating}");
         }
 
-        // Деконструкторы позволяют выполнить декомпозицию объекта на отдельные части
+        // Деконструктори дозволяють виконати декомпозицію об'єкта деякі частини
         public void Deconstruct(out string firstName, out string lastName, out int age, out double rating)
         {
             firstName = _firstName;
